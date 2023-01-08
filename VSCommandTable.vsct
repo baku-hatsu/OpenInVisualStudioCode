@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Include href="KnownImageIds.vsct" />
+  <Include href="VSGlobals.vsct" />
+
+  <Commands package="OpenInVisualStudioCode">
+    <Groups>
+      <Group guid="OpenInVisualStudioCode" id="OpenInVSCodeGroup" priority="0x0800">
+        <Parent guid="VSMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
+      </Group>
+      <Group guid="OpenInVisualStudioCode" id="OpenInVSCodeGroup" priority="0x0800">
+        <Parent guid="VSMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+      </Group>
+    </Groups>
+
+    <!--This section defines the elements the user can interact with, like a menu command or a button or combo box in a toolbar. -->
+    <Buttons>
+      <Button guid="OpenInVisualStudioCode" id="OpenInVSCode" priority="0x0100" type="Button">
+        <Parent guid="OpenInVisualStudioCode" id="OpenInVSCodeGroup" />
+        <Icon guid="ImageCatalogGuid" id="OpenFolder" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Open in VS Code ...</ButtonText>
+          <LocCanonicalName>.OpenInVisualStudioCode.OpenInVSCode</LocCanonicalName>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="OpenInVisualStudioCode" value="{f43ff903-ed38-49fa-9f06-fcb1c1cdc69d}">
+      <IDSymbol name="OpenInVSCodeGroup" value="0x0001" />
+      <IDSymbol name="OpenInVSCode" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
